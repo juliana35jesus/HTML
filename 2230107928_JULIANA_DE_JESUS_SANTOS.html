@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cadastro de Pessoa</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+        }
+        table {
+            width: 100%;
+            max-width: 600px;
+            margin: 0 auto;
+            border-collapse: collapse;
+        }
+        th, td {
+            padding: 10px;
+            text-align: left;
+        }
+        th {
+            background-color: #f2f2f2;
+        }
+        tr:nth-child(even) {
+            background-color: #f9f9f9;
+        }
+        input[type="text"], textarea, select {
+            width: 100%;
+            padding: 8px;
+            box-sizing: border-box;
+        }
+        input[type="radio"], input[type="checkbox"] {
+            width: auto;
+        }
+    </style>
+</head>
+<body>
+
+<h2 style="text-align: center;">Cadastro de Pessoa</h2>
+
+<form action="/submit" method="post">
+    <table>
+        <tr>
+            <th colspan="2">Dados Pessoais</th>
+        </tr>
+        <tr>
+            <td>Nome:</td>
+            <td><input type="text" name="nome" required></td>
+        </tr>
+        <tr>
+            <td>Sobrenome:</td>
+            <td><input type="text" name="sobrenome" required></td>
+        </tr>
+        <tr>
+            <td>Email:</td>
+            <td><input type="text" name="email" required></td>
+        </tr>
+        <tr>
+            <td>Telefone:</td>
+            <td><input type="text" name="telefone" placeholder="(XX)" required></td>
+        </tr>
+        <tr>
+            <td>Gênero:</td>
+            <td>
+                <input type="radio" name="genero" value="masculino" required> Masculino
+                <input type="radio" name="genero" value="feminino"> Feminino
+                <input type="radio" name="genero" value="outro"> Outro
+            </td>
+        </tr>
+        <tr>
+            <td>Data de Nascimento:</td>
+            <td><input type="text" name="data_nascimento" placeholder="dd/mm/aaaa" required></td>
+        </tr>
+        <tr>
+            <td>Estado Civil:</td>
+            <td>
+                <select name="estado_civil" required>
+                    <option value="solteiro">Solteiro</option>
+                    <option value="casado">Casado</option>
+                    <option value="divorciado">Divorciado</option>
+                    <option value="viuvo">Viúvo</option>
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>Endereço:</td>
+            <td><input type="text" name="endereco" required></td>
+        </tr>
+        <tr>
+            <td>Cidade:</td>
+            <td><input type="text" name="cidade" required></td>
+        </tr>
+        <tr>
+            <td>Estado:</td>
+            <td>
+                <select name="estado" size="4" required>
+                    <option value="AC">Acre</option>
+                    <option value="AL">Alagoas</option>
+                    <option value="AP">Amapá</option>
+                    <option value="AM">Amazonas</option>
+		    <option value="BA">Bahia</option>
+                    <option value="CE">Ceará</option>
+                    <option value="DF">Distrito Federal</option>
+                    <option value="ES">Espírito Santo</option>
+		    <option value="GO">Goiás</option>
+                    <option value="MA">Maranhão</option>
+                    <option value="MT">Mato Grosso</option>
+                    <option value="MS">Mato Grosso do Sul</option>
+                    <option value="MG">Minas Gerais</option>
+                    <option value="PA">Pará</option>
+                    <option value="PB">Paraíba</option>
+                    <option value="PR">Paraná</option>
+                    <option value="PE">Pernambuco</option>
+                    <option value="PI">Piauí</option>
+                    <option value="RJ">Rio de Janeiro</option>
+                    <option value="RN">Rio Grande do Norte</option>
+                    <option value="RS">Rio Grande do Sul</option>
+                    <option value="RO">Rondônia</option>
+                    <option value="RR">Roraima</option>
+                    <option value="SC">Santa Catarina</option>
+                    <option value="SP">São Paulo</option>
+                    <option value="SE">Sergipe</option>
+                    <option value="TO">Tocantins</option>
+                    
+                </select>
+            </td>
+        </tr>
+        <tr>
+            <td>CEP:</td>
+            <td><input type="text" name="cep" required></td>
+        </tr>
+        <tr>
+            <td>Nacionalidade:</td>
+            <td><input type="text" name="nacionalidade" required></td>
+        </tr>
+        <tr>
+            <td>Idioma:</td>
+            <td><input type="text" name="idioma" required></td>
+        </tr>
+        <tr>
+            <td>Habilidades:</td>
+            <td>
+                <input type="checkbox" name="habilidades" value="programacao"> Programação
+                <input type="checkbox" name="habilidades" value="design"> Design
+                <input type="checkbox" name="habilidades" value="analise_de_dados"> Análise de Dados
+            </td>
+        </tr>
+        <tr>
+            <td>Sobre Você:</td>
+            <td><textarea name="sobre" rows="8" required></textarea></td>
+        </tr>
+        <tr>
+            <td>Nome de Usuário:</td>
+            <td><input type="text" name="usuario" required></td>
+        </tr>
+        <tr>
+            <td>Senha:</td>
+            <td><input type="text" name="senha" required></td>
+        </tr>
+        <tr>
+            <td>Confirme a Senha:</td>
+            <td><input type="text" name="confirme_senha" required></td>
+        </tr>
+        <tr>
+            <td colspan="2" style="text-align: center;">
+                <button type="submit">Cadastrar</button>
+            </td>
+        </tr>
+    </table>
+</form>
+
+</body>
+</html>
